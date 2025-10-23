@@ -23,7 +23,8 @@ RUN ./mvnw dependency:go-offline
 COPY src ./src
 
 # Build project
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -DskipTests -Dmaven.test.skip=true
+
 
 # Set dynamic port for Render
 ENV PORT=8080
