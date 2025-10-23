@@ -12,6 +12,8 @@ COPY .mvn .mvn
 
 
 
+
+
 # Give execution permission to mvnw
 RUN chmod +x ./mvnw
 
@@ -24,6 +26,7 @@ COPY src ./src
 
 # Build project
 RUN ./mvnw clean package -DskipTests -Dmaven.test.skip=true
+COPY --from=build /app/target/diet-0.0.1-SNAPSHOT.jar app.jar
 
 
 # Set dynamic port for Render
