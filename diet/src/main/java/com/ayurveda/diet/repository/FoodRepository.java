@@ -7,19 +7,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
-/*@Repository
-public interface FoodRepository extends JpaRepository<Food, Long> {
-    List<Food> findByNameContainingIgnoreCase(String name);
-}*/
-/*@Repository
-public interface FoodRepository extends JpaRepository<Food, Long> {
-    List<Food> findByCategory(String category);
-    List<Food> findByDoshaContaining(String dosha);
-    List<Food> findByCategoryAndDoshaContaining(String category, String dosha);
-    List<Food> findByNameContainingIgnoreCase(String name);
-    List<Food> findByRasa(String rasa);
-    List<Food> findByVirya(String virya);
-}*/
 @Repository
 public interface FoodRepository extends JpaRepository<Food, Long> {
     // Search and filter methods
