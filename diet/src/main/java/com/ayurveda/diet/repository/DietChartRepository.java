@@ -1,21 +1,3 @@
-/*package com.ayurveda.diet.repository;
-
-
-import com.ayurveda.diet.model.DietChart;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import java.util.List;
-import java.util.Optional;
-import java.util.Optional;
-@Repository
-public interface DietChartRepository extends JpaRepository<DietChart, Long> {
-    List<DietChart> findByPatientIdOrderByCreatedDateDesc(Long patientId);
-    List<DietChart> findByDietitianIdOrderByCreatedDateDesc(Long dietitianId);
-    List<DietChart> findByPatientIdAndStatus(Long patientId, String status);
-    long countByDietitianIdAndStatus(Long dietitianId, String status);
-    Optional<DietChart> findTopByPatientIdOrderByCreatedDateDesc(Long patientId);
-}*/
-
 
 package com.ayurveda.diet.repository;
 
@@ -25,24 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
-
-// DietChart Repository
-/*@Repository
-public interface DietChartRepository extends JpaRepository<DietChart, Long> {
-    List<DietChart> findByPatientIdOrderByCreatedDateDesc(Long patientId);
-    List<DietChart> findByDietitianIdOrderByCreatedDateDesc(Long dietitianId);
-    List<DietChart> findByPatientIdAndStatus(Long patientId, String status);
-}*/
-/*@Repository
-public interface DietChartRepository extends JpaRepository<DietChart, Long> {
-    List<DietChart> findByPatientIdOrderByCreatedDateDesc(Long patientId);
-    List<DietChart> findByDietitianIdOrderByCreatedDateDesc(Long dietitianId);
-    List<DietChart> findByPatientIdAndStatus(Long patientId, String status);
-
-    @Query("SELECT d FROM DietChart d WHERE d.patient.id = :patientId AND d.status = 'ACTIVE'")
-    List<DietChart> findActiveDietChartsByPatientId(@Param("patientId") Long patientId);
-}*/
-
 
 import com.ayurveda.diet.model.DietChart;
 import org.springframework.data.jpa.repository.JpaRepository;
